@@ -1,0 +1,12 @@
+﻿Migrations are the files that are created to make the database and tables based 
+on the contents of the Context Class of the Infrastructure.Data Folder.
+The contents of the context class are as follows
+1. implements DbContext of the EntityFrameworkCore
+2. Constructor with DbContextOptions<ContextClass> wit hadded base constructor
+3. Fully defined properties that are of type DbSet<T>
+	3a. Type T Defines the Name of the table and the columns that are created
+
+To make migrations:
+	Open Package Manager Console
+	Enter Command 'add-migration "MigrationName"'
+	Enter Command 'Update-Database' to run migrations in order
